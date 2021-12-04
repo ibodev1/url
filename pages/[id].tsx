@@ -37,13 +37,10 @@ export default function Redirect({ url }: RedirectProps) {
             </div>
         );
     }
-
-    useEffect(() => {
-        setTimeout(() => {
-          window.location.href = url;
-        }, 500);
-      }, []);
-
+    setTimeout(() => {
+        window.location.href = url;
+      
+      }, 500);
     return (
         <div >
             <h1>Redirecting</h1>
