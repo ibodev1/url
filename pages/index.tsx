@@ -47,16 +47,18 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>link kısalt</h1>
-      <input
-        placeholder="URL"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)} />
-      <button onClick={submit}
-
-      >
-        Gönder</button>
-
+      <div className={styles.info}>
+        <h1>Create Your Short <span>URL</span>!</h1>
+        <p>You can simplify your annoying long and complex links and make your job easier :)</p>
+      </div>
+      <div className={styles.url}>
+        <input
+          placeholder="Your Long URL..."
+          value={url}
+          type={url}
+          onChange={(e) => setUrl(e.target.value)} />
+        <button onClick={submit} >Shorten</button>
+      </div>
     </div>
   )
 }
